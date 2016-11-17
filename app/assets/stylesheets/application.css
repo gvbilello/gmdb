@@ -13,3 +13,29 @@
  *= require_tree .
  *= require_self
  */
+
+.page-title {
+  font-size: 150%;
+}
+
+.movie-poster-small {
+  height: 150px;
+  width: 100px;
+}
+
+.movie-display-large {
+  margin-top: 10px;
+}
+
+.movie-search-result {
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+.movie-search-title {
+  font-size: 130%;
+}
+
+.movie-search-info {
+  font-size: 110%;
+}

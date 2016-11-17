@@ -3,7 +3,8 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      movies: []
+      movies: [],
+      movie: undefined
     }
   }
 
@@ -11,24 +12,29 @@ class App extends React.Component {
     // debugger;
     this.setState({
       movies: [movies],
+      movie: undefined
     })
   }
 
   displayMovie(movie) {
     // debugger;
     this.setState({
+      movies: [],
       movie: movie
     })
   }
 
   render() {
     return (
-      <div className="app-main">
-        <header id="nav">
-          <h1>GMDb</h1>
-          <a href="/">home</a>
+      <div className="container">
+        <nav>
+          <div className="nav-wrapper">
+            <a href="/" className="brand-logo"><span className="page-title">GMDb<i className="large material-icons">movie</i></span></a>
+          </div>
+        </nav>
+        <div className="col s6 offset-3">
           <SearchBoxView onSearch={this.updateMain.bind(this)} />
-        </header>
+        </div>
         <section className="movies-display">
           <SearchMovieView onSingleClick={this.displayMovie.bind(this)} movie={this.state.movie} movies={this.state.movies} />
         </section>
@@ -36,3 +42,14 @@ class App extends React.Component {
     )
   }
 }
+
+// <div className="container">
+//   <header id="nav">
+//     <h1>GMDb</h1>
+//     <a href="/">home</a>
+//     <SearchBoxView onSearch={this.updateMain.bind(this)} />
+//   </header>
+//   <section className="movies-display">
+//     <SearchMovieView onSingleClick={this.displayMovie.bind(this)} movie={this.state.movie} movies={this.state.movies} />
+//   </section>
+// </div>
