@@ -1,9 +1,10 @@
-class MainView extends React.Component {
+// class MainView extends React.Component {
 
-  render() {
-
-    return (
-
-      )
-  }
-}
+//   render() {
+//     return (
+//       <div id="main">
+//         <SearchMovieView />
+//       </div>
+//     )
+//   }
+// }
