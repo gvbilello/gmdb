@@ -28,7 +28,7 @@ class App extends React.Component {
     return (
       <div className="container">
         <nav>
-          <div className="nav-wrapper">
+          <div className="nav-wrapper indigo lighten-2">
             <a href="/" className="brand-logo"><span className="page-title">GMDb<i className="large material-icons">movie</i></span></a>
           </div>
         </nav>
