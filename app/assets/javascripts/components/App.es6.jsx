@@ -4,23 +4,21 @@ class App extends React.Component {
     super();
     this.state = {
       movies: [],
-      movie: undefined
+      displayMovie: undefined
     }
   }
 
   updateMain(movies) {
     // debugger;
     this.setState({
-      movies: [movies],
-      movie: undefined
+      movies: [movies]
     })
   }
 
   displayMovie(movie) {
     // debugger;
     this.setState({
-      movies: [],
-      movie: movie
+      displayMovie: movie
     })
   }
 
@@ -36,7 +34,7 @@ class App extends React.Component {
           <SearchBoxView onSearch={this.updateMain.bind(this)} />
         </div>
         <section className="movies-display">
-          <SearchMovieView onSingleClick={this.displayMovie.bind(this)} movie={this.state.movie} movies={this.state.movies} />
+          <SearchMovieView onSingleClick={this.displayMovie.bind(this)} displayMovie={this.state.displayMovie} movies={this.state.movies} />
         </section>
       </div>
     )

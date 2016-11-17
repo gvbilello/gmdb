@@ -25,17 +25,24 @@ class MovieView extends React.Component {
       poster = movie.Poster;
     }
     return (
-      <div className="row hoverable movie-search-result">
-        <a onClick={this.handleClick.bind(this)}>
-          <div className="col s2">
-            <img className="movie-poster-small" src={poster} />
+      <ul className="collapsible popout">
+        <li>
+          <div className="collapsible-header row movie-search-result">
+            <a onClick={this.handleClick.bind(this)}>
+              <div className="col s2">
+                <img className="movie-poster-small" src={poster} />
+              </div>
+              <div className="col s6">
+                <p className="movie-search-title"><strong>{movie.Title}</strong></p>
+                <p className="movie-search-info"><em>{movie.Type}</em> ({movie.Year})</p>
+              </div>
+            </a>
           </div>
-          <div className="col s6">
-            <p className="movie-search-title"><strong>{movie.Title}</strong></p>
-            <p className="movie-search-info"><em>{movie.Type}</em> ({movie.Year})</p>
+          <div className="collapsible-body">
+            <DisplayMovieView data={this.props.displayMovie} />
           </div>
-        </a>
-      </div>
+        </li>
+      </ul>
     )
   }
 }
